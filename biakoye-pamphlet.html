@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Biakoye's Team Plan — Pamphlet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12333A; --ink-2:#2A5C63; --ink-3:#5C7F84;
+  --cream:#F3F0E3; --cream-2:#FAF8EF; --sage:#D3DFD1; --mint:#CDEDEA;
+  --teal:#2F9E96; --teal-deep:#17726C; --orange:#E4692F;
+  --sun:#F5C84C; --coral:#EF6F6C; --sky:#4EA8DE; --plum:#8E6FB5;
+  --green:#57B95C; --green-2:#3E9E52; --pink:#D96BA0; --lake:#1E5E52;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;background:#8a8a8a}
+@page{ size:297mm 210mm; margin:0 }
+.sheet{ width:297mm; height:210mm; display:grid; grid-template-columns:repeat(3,99mm);
+        background:var(--cream); overflow:hidden; position:relative }
+.sheet + .sheet{ margin-top:8mm }
+.panel{ width:99mm; height:210mm; padding:11mm 9mm 13mm; overflow:hidden; position:relative;
+        display:flex; flex-direction:column }
+.panel + .panel{ border-left:.2mm dashed rgba(18,51,58,.3) }
+h2.t{ font-size:16pt; font-weight:800; letter-spacing:-.3pt; line-height:1.1; margin:0 0 3mm }
+.kick{ font-size:7.4pt; font-weight:800; letter-spacing:1.6pt; text-transform:uppercase; color:var(--teal); margin:0 0 2mm }
+p{ margin:0 0 3mm; font-size:9.2pt; line-height:1.5; color:var(--ink-2) }
+b{ color:var(--ink) }
+.small{ font-size:7.8pt; line-height:1.45; color:var(--ink-3) }
+.cover{ padding:0; background:var(--cream) }
+.cover .sky{ width:99mm; height:44mm; display:block }
+.cover .body{ flex:1; padding:0 9mm 13mm; display:flex; flex-direction:column; background:var(--cream) }
+.sign{ background:var(--lake); border-radius:2.6mm; padding:6mm 5mm 6.5mm; text-align:center;
+       box-shadow:0 1.6mm 0 rgba(0,0,0,.14); margin-top:-3.5mm; position:relative; z-index:2 }
+.sign h1{ margin:0; color:#fff; font-size:26pt; font-weight:800; line-height:1.0; letter-spacing:-.8pt }
+.sign p{ margin:2.6mm 0 0; color:#FFD9A8; font-size:8pt; font-weight:600; letter-spacing:1pt; text-transform:uppercase; line-height:1.4 }
+.hook{ margin-top:5mm; font-size:10.5pt; line-height:1.45; color:var(--ink-2); text-align:center }
+.hook b{ color:var(--ink) }
+.teaser{ margin-top:5mm; background:#fff; border-radius:2.6mm; padding:4mm 5mm; box-shadow:0 .8mm 0 rgba(18,51,58,.1) }
+.teaser h4{ margin:0 0 2.2mm; font-size:8pt; font-weight:800; letter-spacing:1.1pt; text-transform:uppercase; color:var(--teal-deep); text-align:center }
+.teaser div{ display:flex; align-items:center; gap:2.6mm; font-size:8.4pt; font-weight:600; color:var(--ink-2); margin-bottom:1.5mm }
+.teaser div:last-child{ margin-bottom:0 }
+.teaser i{ width:2.8mm; height:2.8mm; border-radius:50%; display:block; flex:0 0 2.8mm }
+.coverfoot{ margin-top:auto; display:flex; align-items:center; gap:4mm; justify-content:center }
+.coverfoot img{ width:23mm; height:22mm; object-fit:contain }
+.coverfoot span{ font-size:7pt; font-weight:800; letter-spacing:1pt; color:var(--teal-deep); line-height:1.35 }
+.card{ background:#fff; border-radius:2.6mm; padding:4.2mm 4.4mm; box-shadow:0 .8mm 0 rgba(18,51,58,.1); margin-bottom:3.6mm }
+.card h3{ margin:0 0 1.6mm; font-size:10.5pt; font-weight:800; line-height:1.15 }
+.card p{ margin:0; font-size:8.8pt; line-height:1.45; color:var(--ink-3) }
+.row{ display:flex; gap:3.4mm; align-items:flex-start; margin-bottom:3.4mm }
+.row.mid{ align-items:center }
+.disc{ flex:0 0 8.4mm; width:8.4mm; height:8.4mm; border-radius:50%; display:grid; place-items:center; color:#fff }
+.row h4{ margin:.4mm 0 .9mm; font-size:9.4pt; font-weight:700; line-height:1.2 }
+.row.mid h4{ margin:0 }
+.row p{ margin:0; font-size:8.4pt; line-height:1.42; color:var(--ink-3) }
+.zone{ margin-bottom:5mm }
+.zhead{ display:flex; align-items:center; gap:3mm; margin-bottom:2.4mm }
+.znum{ flex:0 0 9mm; width:9mm; height:9mm; border-radius:2.6mm; display:grid; place-items:center; color:#fff; font-size:13pt; font-weight:800 }
+.zdisc{ flex:0 0 9mm; width:9mm; height:9mm; border-radius:50%; display:grid; place-items:center; color:#fff }
+.zt h3{ margin:0; font-size:11.5pt; font-weight:800; line-height:1.08; letter-spacing:-.2pt }
+.zt span{ font-size:6.6pt; font-weight:800; letter-spacing:1.1pt; text-transform:uppercase }
+.zlede{ font-size:9pt; font-weight:600; color:var(--ink-2); margin:0 0 2.4mm }
+ul.acts{ margin:0; padding:0; list-style:none }
+ul.acts li{ font-size:8.4pt; line-height:1.42; color:var(--ink-3); padding-left:4.6mm; position:relative; margin-bottom:1.8mm }
+ul.acts li::before{ content:""; position:absolute; left:0; top:1.6mm; width:2.1mm; height:2.1mm; border-radius:50%; background:currentColor; opacity:.55 }
+ul.acts li b{ color:var(--ink-2) }
+.back{ background:var(--sage) }
+.logos{ background:#fff; border-radius:2.6mm; padding:5mm 4mm; display:grid; grid-template-columns:1fr 1fr;
+        gap:5mm 3mm; place-items:center; margin-bottom:4mm }
+.logos img{ max-width:100%; max-height:13mm; object-fit:contain; display:block }
+.logos img.wide{ max-height:8.5mm }
+.ack{ font-size:6.6pt; line-height:1.45; color:var(--ink-3); margin:0 0 4mm; text-align:justify }
+.srcbox{ border-top:.3mm solid rgba(18,51,58,.2); padding-top:3mm; margin-top:auto }
+.dreams{ display:grid; grid-template-columns:repeat(6,1fr); gap:2.2mm }
+.goal{ grid-column:span 2; background:#fff; border-radius:2.4mm; padding:2.2mm 1.2mm 2.3mm; text-align:center; box-shadow:0 .8mm 0 rgba(18,51,58,.1) }
+.dreams .goal:nth-child(4){ grid-column:2 / span 2 }
+.goal .gd{ width:6.4mm; height:6.4mm; border-radius:50%; display:grid; place-items:center; color:#fff; margin:0 auto 1.4mm }
+.goal b{ display:block; font-size:8pt; font-weight:700; line-height:1.15 }
+.goal span{ display:block; font-size:6.3pt; line-height:1.28; color:var(--ink-3); margin-top:.6mm }
+.facts{ display:grid; grid-template-columns:1fr 1fr; gap:3mm; margin-bottom:4mm }
+.fact{ background:#fff; border-radius:2.4mm; padding:3mm 2mm; text-align:center; box-shadow:0 .8mm 0 rgba(18,51,58,.1) }
+.fact .n{ font-size:21pt; font-weight:800; line-height:.95; letter-spacing:-.8pt }
+.fact .l{ margin-top:1.2mm; font-size:6.6pt; font-weight:700; letter-spacing:.6pt; text-transform:uppercase; color:var(--teal-deep); line-height:1.25 }
+.team{ display:flex; flex-wrap:wrap; gap:1.8mm; margin-top:1mm }
+.chip{ display:flex; align-items:center; gap:1.6mm; background:#fff; border-radius:99mm; padding:1mm 2.8mm 1mm 1mm;
+       box-shadow:0 .6mm 0 rgba(18,51,58,.09); font-size:7.6pt; font-weight:700; color:var(--ink) }
+.chip i{ width:5.6mm; height:5.6mm; border-radius:50%; display:grid; place-items:center; color:#fff }
+.cheer{ background:var(--orange); color:#fff; border-radius:2.6mm; padding:4mm 5mm; text-align:center; margin-bottom:3.6mm }
+.cheer h3{ margin:0 0 1.2mm; font-size:11pt; font-weight:800; line-height:1.15; color:#fff }
+.cheer p{ margin:0; font-size:8.4pt; line-height:1.4; font-weight:600; color:#FFE2D2 }
+.bigidea{ background:var(--teal); color:#fff; border-radius:2.6mm; padding:5mm; margin-top:auto }
+.bigidea p{ color:#E4F5F2; font-size:8.8pt; margin:0; line-height:1.5 }
+.bigidea b{ color:var(--sun) }
+.panelnum{ position:absolute; bottom:4.5mm; left:0; right:0; text-align:center;
+           font-size:6pt; font-weight:700; letter-spacing:1pt; text-transform:uppercase; color:rgba(18,51,58,.34) }
+.panel.spread{ justify-content:space-between }
+.panel.spread .zone{ margin-bottom:0 }
+.panel.tight .row{ margin-bottom:2.5mm }
+.panel.tight h2.t{ margin-bottom:2.3mm }
+.panel.tight .card{ margin-bottom:2.6mm; padding:3.6mm 4.2mm }
+.panel.tight .card p{ font-size:8.5pt; line-height:1.42 }
+@media screen{ body{ padding:8mm } .sheet{ box-shadow:0 0 6mm rgba(0,0,0,.35) } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <!-- the lobes peak near y=6.1, so the glyph's own centre is ~1 unit low in the 24 grid -->
+  <g id="i-heart" transform="translate(0 -1)"><path d="M12 20s-7-4.6-7-9.4A4.1 4.1 0 0 1 12 8a4.1 4.1 0 0 1 7 2.6C19 15.4 12 20 12 20Z"/></g>
+  <g id="i-child"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 20.5c0-3.6 2.9-6.2 6.5-6.2s6.5 2.6 6.5 6.2"/></g>
+  <g id="i-family"><circle cx="8" cy="7.6" r="2.8"/><circle cx="16.6" cy="9" r="2.2"/><path d="M3.4 19.6c0-2.9 2.1-5 4.6-5s4.6 2.1 4.6 5"/><path d="M14 19.6c0-2.3 1.2-3.9 2.9-3.9s2.9 1.6 2.9 3.9"/></g>
+  <g id="i-people"><circle cx="12" cy="6.6" r="2.6"/><circle cx="5" cy="10.4" r="2.2"/><circle cx="19" cy="10.4" r="2.2"/><path d="M7.4 18.4c0-2.6 2-4.5 4.6-4.5s4.6 1.9 4.6 4.5"/><path d="M2 19.6c0-2.1 1.4-3.6 3.2-3.6"/><path d="M22 19.6c0-2.1-1.4-3.6-3.2-3.6"/></g>
+  <g id="i-gov"><path d="M3.5 9.6 12 4.4l8.5 5.2"/><path d="M5.5 10.6V18M10 10.6V18M14 10.6V18M18.5 10.6V18"/><path d="M3.5 20.6h17"/></g>
+  <g id="i-teacher"><path d="M3 8.4 12 4.2l9 4.2-9 4.2Z"/><path d="M7 10.6v4.6c0 1.6 2.4 2.8 5 2.8s5-1.2 5-2.8v-4.6"/><path d="M21 8.4V14"/></g>
+  <g id="i-stetho"><path d="M6 3v5a4 4 0 0 0 8 0V3"/><path d="M6 3H4.4M14 3h1.6"/><path d="M10 12v2.6a4.4 4.4 0 0 0 8.8 0V13"/><circle cx="18.8" cy="11" r="2"/></g>
+  <g id="i-house"><path d="M4 11.2 12 4l8 7.2"/><path d="M6 10.5V20h12v-9.5"/><path d="M10 20v-5h4v5"/></g>
+  <g id="i-town"><path d="M3 20.6h18"/><path d="M5 20.6V9.4l5-3.6v14.8"/><path d="M10 20.6V11l6 2.6v7"/><path d="M16 20.6v-4.2l3 1.2v3"/><path d="M7.2 12.2h.6M7.2 15.4h.6M12.4 15.2h.8"/></g>
+  <g id="i-shield"><path d="M12 3.2 19 6v5.5c0 4.4-3 7.4-7 9.3-4-1.9-7-4.9-7-9.3V6Z"/><path d="m9.2 12.1 2 2 3.6-3.9"/></g>
+  <g id="i-hands"><path d="M12 20.4S4.5 16 4.5 10.6A3.9 3.9 0 0 1 12 8.6a3.9 3.9 0 0 1 7.5 2c0 5.4-7.5 9.8-7.5 9.8Z"/><path d="M12 8.6v11.8"/></g>
+  <g id="i-spark"><path d="M12 3.2 13.9 9l5.9 1.9-5.9 1.9L12 18.7l-1.9-5.9L4.2 10.9 10.1 9Z"/></g>
+  <g id="i-mic"><rect x="9.2" y="3" width="5.6" height="10.4" rx="2.8"/><path d="M5.6 11.6a6.4 6.4 0 0 0 12.8 0"/><path d="M12 18v3M8.8 21h6.4"/></g>
+  <g id="i-ear"><path d="M8.4 21c0-2.4-1.8-3.6-1.8-8.4a5.6 5.6 0 0 1 11.2-.2c0 2.3-1.7 3.2-2.8 4.6-.9 1.2-.5 2.8-2 2.8-1.1 0-1.6-.9-1.6-1.8 0-1.8 2.1-2.2 2.1-4a2.7 2.7 0 0 0-5.4-.2"/></g>
+  <g id="i-bowl"><path d="M4 12h16a8 8 0 0 1-16 0Z"/><path d="M3 20h18"/><path d="M9 8c0-1.5 1-2 1-3.2S9 3 9 3"/><path d="M14 8c0-1.5 1-2 1-3.2S14 3 14 3"/></g>
+  <g id="i-coin"><circle cx="12" cy="12" r="8.4"/><path d="M12 7.4v9.2"/><path d="M14.6 9.6c-.6-.8-1.6-1.2-2.7-1.2-1.5 0-2.6.8-2.6 2s1 1.7 2.6 2.1c1.8.4 2.9 1 2.9 2.2s-1.2 2-2.8 2c-1.2 0-2.2-.4-2.8-1.2"/></g>
+  <g id="i-plan"><path d="M5 4.4h14v16.2H5z"/><path d="M8.4 9h7.2M8.4 12.6h7.2M8.4 16.2h4"/></g>
+  <!-- map, whistle, nature and everyday icons -->
+  <g id="i-map"><path d="M9.4 4.2 3.6 6.4v13.4l5.8-2.2 5.2 2.2 5.8-2.2V4.2l-5.8 2.2Z"/><path d="M9.4 4.2v13.4M14.6 6.4v13.4"/></g>
+  <g id="i-whistle"><path d="M3.4 11.4h9.2l3.4-3.4v9.2l-3.4-3.4H3.4z"/><circle cx="18.4" cy="12" r="2.6"/><path d="M6.2 14.6V18"/></g>
+  <g id="i-tree"><path d="M12 21v-3.6"/><path d="M12 3.4 6.2 12h11.6Z"/><path d="M12 8.6 4.8 17.6h14.4Z"/><path d="M8.6 21h6.8"/></g>
+  <g id="i-bin"><path d="M4.6 7h14.8"/><path d="M6.4 7l1 13.4h9.2L17.6 7"/><path d="M9.4 7V4.4h5.2V7"/><path d="M10.2 10.6v6.4M13.8 10.6v6.4"/></g>
+  <g id="i-phone"><rect x="6.6" y="2.8" width="10.8" height="18.4" rx="2.6"/><path d="M10.4 5.6h3.2"/><circle cx="12" cy="17.8" r="1.1"/></g>
+  <g id="i-leaf"><path d="M20.4 3.6c0 9.2-5.8 13.6-11.8 13.6a4.8 4.8 0 0 1-4.8-4.8C3.8 6.4 10.4 3.6 20.4 3.6Z"/><path d="M4.2 20.8C5.8 15 10.4 10.4 16.6 8.4"/></g>
+  <g id="i-access"><circle cx="12" cy="4.2" r="2"/><path d="M9.6 8.4h4.8"/><path d="M12 8.4v6h4.4l2.2 6.2"/><circle cx="11" cy="16.6" r="4.4"/></g>
+  <g id="i-briefcase"><rect x="3" y="7.4" width="18" height="12.6" rx="2.2"/><path d="M9 7.4V5.6a1.8 1.8 0 0 1 1.8-1.8h2.4A1.8 1.8 0 0 1 15 5.6v1.8"/><path d="M3 12.6h18"/></g>
+  <g id="i-cart"><path d="M2.6 4.6h2.8l2.6 10.8h9.6"/><path d="M6.6 7.8h14.8l-2.2 6.2H8.1"/><circle cx="9.6" cy="19" r="1.6"/><circle cx="17.4" cy="19" r="1.6"/></g>
+  <g id="i-sprout"><path d="M12 21v-7.4"/><path d="M12 13.6C12 9.8 9.4 7.4 5.4 7.4c0 4 2.6 6.2 6.6 6.2Z"/><path d="M12 13.6c0-4.6 2.6-7.2 6.6-7.2 0 4.6-2.6 7.2-6.6 7.2Z"/><path d="M8.4 21h7.2"/></g>
+  <g id="i-ticket"><rect x="2.8" y="6" width="18.4" height="12" rx="2.4"/><path d="M8.6 6v12"/><path d="M12 10.4h5.8M12 14h4"/></g>
+  <g id="i-party"><path d="M3.2 20.8 8.8 8.4l6.8 6.8-13.6 5.6Z"/><path d="M11 12.2 8.8 8.4"/><path d="M14.4 4v2.2M19.2 3.2 17.6 4.8M20.8 8.8h-2.2M20 13.8l-1.8-1.6"/></g>
+  <g id="i-palm"><path d="M12.6 21c-.6-6.2.4-10 1.8-12.6"/><path d="M14.4 8.4c-2.6-1.8-5.4-1.6-7 .6M14.4 8.4c-.4-3 .8-5.4 3.2-6.2M14.4 8.4c2.6-1 5.2-.2 6.4 2M14.4 8.4c-3-.6-4.8-2.6-5-5.4"/><path d="M9.4 21h6.6"/></g>
+  <!-- new for Biakoye -->
+  <g id="i-boat"><path d="M2.8 14.4h18.4l-2.8 4.8H5.6Z"/><path d="M6.8 14.4V10h7.6v4.4"/><path d="M16.8 14.4V4.2l3.6 2.6-3.6 2.4"/><path d="M9.6 11.2v2M11.6 11.2v2"/></g>
+  <g id="i-drop"><path d="M12 3.2s-6 6.6-6 11a6 6 0 0 0 12 0c0-4.4-6-11-6-11Z"/><path d="M9.2 14.6a2.8 2.8 0 0 0 2.8 2.8"/></g>
+  <g id="i-book"><path d="M12 6.4C10 5 7.2 4.6 3.6 4.8v13.6c3.6-.2 6.4.2 8.4 1.6 2-1.4 4.8-1.8 8.4-1.6V4.8C16.8 4.6 14 5 12 6.4Z"/><path d="M12 6.4V20"/></g>
+  <g id="i-check"><rect x="5" y="4.6" width="14" height="16.4" rx="2"/><path d="M9 4.6V3h6v1.6"/><path d="m8.6 13 2.4 2.4 4.6-4.8"/></g>
+  <g id="i-ban"><circle cx="12" cy="12" r="8.4"/><path d="m6.1 6.1 11.8 11.8"/></g>
+  <g id="i-search"><circle cx="10.6" cy="10.6" r="6.2"/><path d="m15.2 15.2 5.2 5.2"/></g>
+  <g id="i-swing"><path d="M3.4 20.6 7.4 4.4h9.2l4 16.2"/><path d="M5.2 4.4h13.6"/><path d="M10 4.4v9.4M14 4.4v9.4"/><path d="M8.8 13.8h6.4"/></g>
+  <g id="i-chat"><path d="M4 5.4h16v10.4h-8.6L7 19.6v-3.8H4Z"/><path d="M8 9.4h8M8 12.2h5"/></g>
+  <g id="i-crown"><path d="M4 17.4 3 7.6l5 3.8L12 5l4 6.4 5-3.8-1 9.8Z"/><path d="M4.4 20.4h15.2"/></g>
+  <g id="i-church"><path d="M12 2.6v4M10.2 4.4h3.6"/><path d="M7.4 21v-9.8L12 7.2l4.6 4V21"/><path d="M3.6 21v-5.6l3.8-2.2M20.4 21v-5.6l-3.8-2.2"/><path d="M10.4 21v-3.2a1.6 1.6 0 0 1 3.2 0V21"/><path d="M2.8 21h18.4"/></g>
+  <symbol id="epic-mark" viewBox="0 0 24 24"><path d="M12 2 2 12l10 10 10-10Z"/></symbol>
+</defs></svg>
+<div class="sheet"><div class="panel tight"><p class="kick">First, two big words</p><h2 class="t">Who makes the plan?</h2><div class="card"><h3>A District Assembly</h3><p>Imagine your neighbourhood as a huge team — the District Assembly is the coaches and leaders of that team. They fix roads, build schools, keep streets clean and keep everyone safe.</p></div><div class="card"><h3>A District Plan</h3><p>A giant map made by local leaders to make a district a much better place to live. It lists the biggest problems, then writes a step-by-step checklist for fixing them.</p></div><p class="kick" style="margin-top:1.4mm">Who is the plan for?</p><h2 class="t" style="font-size:13pt">Every child in Biakoye</h2><div class="row"><div class="disc" style="background:var(--sky)"><svg width="4.4mm" height="4.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-access"/></svg></div><div><h4>Children with special needs</h4><p>Kids who need the right support to join in.</p></div></div><div class="row"><div class="disc" style="background:var(--lake)"><svg width="4.4mm" height="4.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-boat"/></svg></div><div><h4>Children living on islands</h4><p>Families by the lake, far from the nearest clinic.</p></div></div><div class="row"><div class="disc" style="background:var(--orange)"><svg width="4.4mm" height="4.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-child"/></svg></div><div><h4>Older kids at school</h4><p>Learning to make smart, healthy choices.</p></div></div><p class="kick" style="margin-top:auto">Our dream for every child</p><div class="dreams"><div class="goal"><div class="gd" style="background:var(--plum)"><svg width="3.8mm" height="3.8mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-heart"/></svg></div><b>Is loved</b><span>and cared for at home.</span></div><div class="goal"><div class="gd" style="background:var(--green-2)"><svg width="3.8mm" height="3.8mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-bowl"/></svg></div><b>Eats well</b><span>good, healthy food to grow strong.</span></div><div class="goal"><div class="gd" style="background:var(--coral)"><svg width="3.8mm" height="3.8mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-shield"/></svg></div><b>Feels safe</b><span>from harm, at home and all around.</span></div><div class="goal"><div class="gd" style="background:var(--sky)"><svg width="3.8mm" height="3.8mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-access"/></svg></div><b>Joins in the fun</b><span>including kids with special needs.</span></div><div class="goal"><div class="gd" style="background:var(--sun)"><svg width="3.8mm" height="3.8mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-teacher"/></svg></div><b>Plays &amp; learns</b><span>in awesome, friendly schools.</span></div></div><div class="panelnum">Inside flap</div></div><div class="panel back"><p class="kick">Working together</p><h2 class="t">Our partners</h2><div class="logos"><img class="wide" src="ucl.png" alt="UCL"><img class="wide" src="nihr.png" alt="NIHR"><img src="logo_flacso.png" alt="FLACSO Argentina"><img class="wide" src="clcd-ghana-logo.jpeg" alt="CLCD — Center for Learning and Childhood Development"></div><p class="ack">This research was funded by the National Institute for Health and Care Research (NIHR) [NIHR158910] using UK international development funding from the UK Government to support global health research. The views expressed in this publication are those of the author(s) and not necessarily those of the NIHR or the UK government.</p><p class="kick" style="margin-top:2mm">Your turn</p><h2 class="t" style="font-size:13pt">What can you do?</h2><div class="row mid"><div class="disc" style="background:var(--lake)"><svg width="4.4mm" height="4.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-drop"/></svg></div><div><h4>Wash your hands before you eat</h4></div></div><div class="row mid"><div class="disc" style="background:var(--orange)"><svg width="4.4mm" height="4.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-chat"/></svg></div><div><h4>Tell a grown-up you trust if a friend needs help</h4></div></div><div class="row mid"><div class="disc" style="background:var(--teal)"><svg width="4.4mm" height="4.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><use href="#i-hands"/></svg></div><div><h4>Invite every kid to play with you</h4></div></div><div class="srcbox"><p class="small"><b>Source:</b> Biakoye District Assembly District Plan (Oti Region) — child-friendly summary, prepared for the EPIC Project.</p><p class="small" style="margin:0">Six super powers so every child in Biakoye grows up happy, healthy, safe and ready to learn.</p></div><div class="panelnum">Back cover</div></div><div class="panel cover"><svg class="sky" viewBox="0 -9 900 400" preserveAspectRatio="xMidYMax slice"
+       role="img" aria-label="Biakoye at golden hour — green hills, palm trees, a church, round thatched huts, a school flying the Ghana flag, the District Assembly building, a big meeting tree and a market stall">
+    <defs>
+      <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FCE7CF"/><stop offset=".5" stop-color="#FDDDB6"/>
+        <stop offset=".82" stop-color="#FDC890"/><stop offset="1" stop-color="#FCB27A"/>
+      </linearGradient>
+      <radialGradient id="sunGlow">
+        <stop offset=".45" stop-color="#FFD86B" stop-opacity=".75"/>
+        <stop offset="1" stop-color="#FFD86B" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <rect y="-9" width="900" height="399" fill="url(#skyGrad)"/>
+
+    <!-- the sun sets behind the District Assembly -->
+    <g id="skSun">
+      <circle id="sunHalo" cx="450" cy="318" r="84" fill="url(#sunGlow)"/>
+      <circle cx="450" cy="318" r="58" fill="#FFC53D"/>
+    </g>
+
+    <!-- three birds, frozen mid-flight -->
+    <g id="skBirds" fill="none" stroke="#2F7A78" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M178 170q6-6 12 0q6-6 12 0"/>
+      <path d="M214 152q5-5 10 0q5-5 10 0"/>
+      <path d="M676 140q6-6 12 0q6-6 12 0"/>
+    </g>
+
+    <!-- Biakoye is hill country: two ridges of rolling hills behind the town -->
+    <g id="skFar">
+      <path fill="#9FD0BF" d="M0 318C70 292 150 290 232 312S372 338 452 318 604 284 704 306 842 296 900 312V384H0Z"/>
+      <path fill="#6FB2A1" d="M0 346C64 326 124 330 192 344S334 362 424 350 566 330 654 344 806 358 900 338V384H0Z"/>
+    </g>
+
+    <!-- Original silhouettes of a Biakoye town, drawn for this poster on a
+         900x450 grid standing on y=384. The warm #F6E2B8 shapes are openings —
+         doors and windows lit at golden hour. -->
+    <g id="skMid">
+      <g id="skMidGeom" fill="#2F7A78">
+        <!-- a tall oil palm at the western edge -->
+        <path d="M27 384C29 330 33 292 39 254L44 255C38 293 35 331 35 384Z"/>
+        <g id="palmL">
+          <path d="M41 254Q20 236 2 256Q22 246 41 258Z"/><path d="M41 254Q34 230 14 226Q32 236 40 257Z"/>
+          <path d="M41 254Q50 228 72 226Q54 236 43 257Z"/><path d="M41 254Q64 240 82 258Q62 248 42 258Z"/>
+          <path d="M41 254Q42 234 34 218Q46 232 44 256Z"/>
+        </g>
+        <!-- the church; its cross clears the title plate at x=130 -->
+        <rect x="80" y="338" width="68" height="46"/><path d="M76 340 114 314 152 340Z"/>
+        <rect x="101" y="292" width="24" height="92"/><path d="M97 294 113 250 129 294Z"/>
+        <rect x="111.8" y="234" width="2.4" height="17"/><rect x="107.5" y="239" width="11" height="2.4"/>
+        <path d="M108.5 314v-8a4.5 4.5 0 0 1 9 0v8Z" fill="#F6E2B8"/>
+        <path d="M106 384v-12a7 7 0 0 1 14 0v12Z" fill="#F6E2B8"/>
+        <rect x="86" y="350" width="7" height="13" rx="3.5" fill="#F6E2B8"/><rect x="134" y="350" width="7" height="13" rx="3.5" fill="#F6E2B8"/>
+        <!-- round huts with thatched cone roofs -->
+        <rect x="164" y="356" width="32" height="28"/><path d="M157 359 180 329 203 359Z"/>
+        <path d="M175 384v-11a5 5 0 0 1 10 0v11Z" fill="#F6E2B8"/>
+        <rect x="208" y="362" width="28" height="22"/><path d="M202 365 222 340 242 365Z"/>
+        <path d="M218 384v-9a4 4 0 0 1 8 0v9Z" fill="#F6E2B8"/>
+        <!-- the school, with its flagpole -->
+        <rect x="252" y="344" width="86" height="40"/><path d="M246 346 262 330H328L344 346Z"/>
+        <rect x="259" y="352" width="10" height="11" fill="#F6E2B8"/><rect x="275" y="352" width="10" height="11" fill="#F6E2B8"/>
+        <rect x="305" y="352" width="10" height="11" fill="#F6E2B8"/><rect x="321" y="352" width="10" height="11" fill="#F6E2B8"/>
+        <path d="M289 384v-16a6 6 0 0 1 12 0v16Z" fill="#F6E2B8"/>
+        <rect x="350" y="288" width="2.6" height="96"/>
+        <!-- Biakoye District Assembly: two storeys under a pediment, a colonnaded porch -->
+        <rect x="366" y="378" width="168" height="6"/>
+        <rect x="372" y="350" width="156" height="28"/>
+        <rect x="384" y="326" width="132" height="24"/><rect x="380" y="322" width="140" height="5"/>
+        <path d="M392 323 450 298 508 323Z"/>
+        <circle cx="450" cy="313" r="4.6" fill="#F6E2B8"/>
+        <rect x="392" y="332" width="9" height="11" fill="#F6E2B8"/><rect x="409" y="332" width="9" height="11" fill="#F6E2B8"/><rect x="426" y="332" width="9" height="11" fill="#F6E2B8"/>
+        <rect x="465" y="332" width="9" height="11" fill="#F6E2B8"/><rect x="482" y="332" width="9" height="11" fill="#F6E2B8"/><rect x="499" y="332" width="9" height="11" fill="#F6E2B8"/>
+        <rect x="380" y="357" width="10" height="13" fill="#F6E2B8"/><rect x="397" y="357" width="10" height="13" fill="#F6E2B8"/><rect x="414" y="357" width="10" height="13" fill="#F6E2B8"/>
+        <rect x="476" y="357" width="10" height="13" fill="#F6E2B8"/><rect x="493" y="357" width="10" height="13" fill="#F6E2B8"/><rect x="510" y="357" width="10" height="13" fill="#F6E2B8"/>
+        <path d="M430 378V356H470V378ZM437 378V356H441V378ZM448 378V356H452V378ZM459 378V356H463V378Z" fill="#F6E2B8" fill-rule="evenodd"/>
+        <!-- the big meeting tree, where chiefs and families gather in the shade -->
+        <path d="M586 384C590 362 588 350 582 338L590 335C595 346 597 352 598 358C600 350 606 342 614 336L620 341C610 351 604 362 604 384Z"/>
+        <circle cx="580" cy="324" r="22"/><circle cx="604" cy="312" r="27"/><circle cx="630" cy="326" r="21"/><ellipse cx="604" cy="334" rx="40" ry="12"/>
+        <!-- a market stall -->
+        <path d="M638 352 652 339H678L692 352Z"/>
+        <rect x="642" y="352" width="3" height="32"/><rect x="685" y="352" width="3" height="32"/><rect x="642" y="367" width="46" height="5"/>
+        <circle cx="654" cy="363" r="3.6" fill="#F6E2B8"/><circle cx="665" cy="363" r="3.6" fill="#F6E2B8"/><circle cx="676" cy="363" r="3.6" fill="#F6E2B8"/>
+        <!-- homes at the eastern end -->
+        <rect x="708" y="352" width="48" height="32"/><path d="M702 354 732 331 762 354Z"/>
+        <rect x="715" y="360" width="9" height="10" fill="#F6E2B8"/><path d="M736 384v-13a5 5 0 0 1 10 0v13Z" fill="#F6E2B8"/>
+        <rect x="776" y="358" width="30" height="26"/><path d="M770 361 791 334 812 361Z"/>
+        <path d="M786 384v-10a5 5 0 0 1 10 0v10Z" fill="#F6E2B8"/>
+        <!-- two palms at the eastern edge -->
+        <path d="M826 384C827 350 829 322 832 298L836 299C833 323 832 351 832 384Z"/>
+        <path d="M834 298Q818 286 804 300Q820 292 834 302Z"/><path d="M834 298Q846 282 864 286Q848 290 836 302Z"/><path d="M834 298Q832 282 824 272Q836 282 836 300Z"/>
+        <path d="M858 384C860 332 864 290 870 252L875 253C869 291 866 333 866 384Z"/>
+        <g id="palmR">
+          <path d="M872 252Q851 234 833 254Q853 244 872 256Z"/><path d="M872 252Q865 228 845 224Q863 234 871 255Z"/>
+          <path d="M872 252Q881 226 903 224Q885 234 874 255Z"/><path d="M872 252Q895 238 913 256Q893 246 873 256Z"/>
+          <path d="M872 252Q873 232 865 216Q877 230 875 254Z"/>
+        </g>
+      </g>
+      <!-- Ghana's flag over the school -->
+      <g id="skFlag" transform="translate(352.6,289)">
+        <rect width="26" height="5.4" fill="#CE1126"/><rect y="5.4" width="26" height="5.4" fill="#FCD116"/><rect y="10.8" width="26" height="5.4" fill="#006B3F"/>
+        <path d="m13 5.9 1 2.1 2.3.2-1.7 1.5.5 2.2-2.1-1.2-2.1 1.2.5-2.2-1.7-1.5 2.3-.2Z" fill="#000"/>
+      </g>
+    </g>
+
+    <g id="skNear" fill="#12333A"><rect x="0" y="384" width="900" height="7"/></g>
+  </svg><div class="body"><div class="sign"><h1>Biakoye's<br>Team Plan</h1><p>Making every child in Biakoye<br>shine bright!</p></div><p class="hook">Who decides how the schools, clinics and playgrounds in your district get better — and how can <b>you</b> help?</p><div class="teaser"><h4>Inside: 6 Super Powers</h4><div><i style="background:var(--plum)"></i>Happy Homes &amp; Caring Families</div><div><i style="background:var(--green-2)"></i>Strong Bodies &amp; Healthy Tummies</div><div><i style="background:var(--coral)"></i>Safe Communities &amp; Protective Shields</div><div><i style="background:var(--sky)"></i>Welcoming Spaces for Everyone</div><div><i style="background:var(--sun)"></i>Super Teachers &amp; Great Learning</div><div><i style="background:var(--orange)"></i>Teamwork Makes the Dream Work!</div></div><div class="coverfoot"><img src="epic-logo-2.svg" alt="EPIC"><span>CHILD-FRIENDLY<br>EDITION</span></div></div><div class="panelnum">Front cover</div></div></div>
+<div class="sheet"><div class="panel"><p class="kick">Understanding the plan</p><h2 class="t">Our 6 Super Powers</h2><p>Biakoye's leaders are focusing on six priority areas — every one points back at the same thing: <b>every child in Biakoye</b>.</p><div class="facts"><div class="fact"><div class="n">6</div><div class="l">Super powers</div></div><div class="fact"><div class="n">0</div><div class="l">Children left behind</div></div></div><div class="zone"><div class="zhead"><div class="znum" style="background:var(--plum);color:#fff">1</div><div class="zdisc" style="background:#74569C"><svg width="5mm" height="5mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#i-house"/></svg></div><div class="zt"><h3>Happy Homes &amp; Caring Families</h3><span style="color:#74569C">Positive parenting</span></div></div><p class="zlede">A happy home is where every child's story begins!</p><ul class="acts"><li style="color:#74569C"><b>Parenting classes —</b> teaching mums, dads and caregivers how to give positive love, care and support.</li><li style="color:#74569C"><b>Family support groups —</b> families share ideas, help one another and learn together.</li><li style="color:#74569C"><b>Community champions —</b> chiefs, religious leaders and local heroes who speak up for children.</li></ul></div><div class="zone"><div class="zhead"><div class="znum" style="background:var(--green-2);color:#fff">2</div><div class="zdisc" style="background:var(--green)"><svg width="5mm" height="5mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#i-bowl"/></svg></div><div class="zt"><h3>Strong Bodies &amp; Healthy Tummies</h3><span style="color:var(--green-2)">Nutrition and health</span></div></div><p class="zlede">Growing bodies need good food, clean hands and a quick check-up!</p><ul class="acts"><li style="color:var(--green-2)"><b>Home gardens —</b> families grow fresh, tasty fruits and vegetables right at home.</li><li style="color:var(--green-2)"><b>Health check-ups —</b> checking on little ones early, so anyone growing slowly gets extra help right away.</li><li style="color:var(--green-2)"><b>Clean hands &amp; safe boats —</b> handwashing stations at schools, and boats that carry health workers and medicine to children on islands.</li></ul></div><div class="panelnum">Inside 1</div></div><div class="panel spread"><div class="zone"><div class="zhead"><div class="znum" style="background:var(--coral);color:#fff">3</div><div class="zdisc" style="background:#D8504D"><svg width="5mm" height="5mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#i-shield"/></svg></div><div class="zt"><h3>Safe Communities &amp; Protective Shields</h3><span style="color:#C2403D">Child protection</span></div></div><p class="zlede">A whole community standing guard, like a giant shield around every child!</p><ul class="acts"><li style="color:#D8504D"><b>Home visits —</b> caring helpers visit homes to make sure every child is safe from harm.</li><li style="color:#D8504D"><b>Anti-drug clubs in schools —</b> helping older kids make smart, healthy choices.</li><li style="color:#D8504D"><b>Speaking up —</b> easy ways for anyone to tell someone when a child needs help.</li></ul></div><div class="zone"><div class="zhead"><div class="znum" style="background:var(--sky);color:#fff">4</div><div class="zdisc" style="background:#3D8FC6"><svg width="5mm" height="5mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#i-access"/></svg></div><div class="zt"><h3>Welcoming Spaces for Everyone</h3><span style="color:#2E7BAE">Disability inclusion</span></div></div><p class="zlede">Every door open, every path smooth — so every child can join in!</p><ul class="acts"><li style="color:#3D8FC6"><b>Checking our buildings —</b> schools, health centres and playgrounds easy for everyone to get into.</li><li style="color:#3D8FC6"><b>Ramps &amp; friendly doors —</b> ramps, smooth paths and easy doors for children who use wheelchairs.</li><li style="color:#3D8FC6"><b>Fun playgrounds for all —</b> parks, daycares and libraries with clear signs, pictures and sounds.</li></ul></div><div class="zone"><div class="zhead"><div class="znum" style="background:var(--sun);color:var(--ink)">5</div><div class="zdisc" style="background:#D9A417"><svg width="5mm" height="5mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#i-teacher"/></svg></div><div class="zt"><h3>Super Teachers &amp; Great Learning</h3><span style="color:#B98A0B">Early learning</span></div></div><p class="zlede">Great teachers and fun tools make learning an adventure!</p><ul class="acts"><li style="color:#D9A417"><b>Trained teachers &amp; caregivers —</b> special training to support every child's learning.</li><li style="color:#D9A417"><b>Fun learning tools —</b> fun books, toys and activity guides in local languages.</li><li style="color:#D9A417"><b>Checking quality —</b> looking at schools again and again, so learning stays fun, safe and helpful.</li></ul></div><div class="panelnum">Inside 2</div></div><div class="panel"><div class="zone"><div class="zhead"><div class="znum" style="background:var(--orange);color:#fff">6</div><div class="zdisc" style="background:#C8551F"><svg width="5mm" height="5mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><use href="#i-people"/></svg></div><div class="zt"><h3>Teamwork Makes the Dream Work!</h3><span style="color:#C8551F">Working together</span></div></div><p class="zlede">No one can do it alone — so everybody joins one big team!</p><ul class="acts"><li style="color:#C8551F"><b>Working together —</b> bringing leaders, doctors, teachers, local chiefs and churches together into one big team to support our children!</li></ul><div class="team"><span class="chip"><i style="background:var(--teal)"><svg width="3.4mm" height="3.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><use href="#i-gov"/></svg></i>District leaders</span><span class="chip"><i style="background:var(--coral)"><svg width="3.4mm" height="3.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><use href="#i-stetho"/></svg></i>Doctors</span><span class="chip"><i style="background:#D9A417"><svg width="3.4mm" height="3.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><use href="#i-teacher"/></svg></i>Teachers</span><span class="chip"><i style="background:var(--plum)"><svg width="3.4mm" height="3.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><use href="#i-crown"/></svg></i>Local chiefs</span><span class="chip"><i style="background:var(--sky)"><svg width="3.4mm" height="3.4mm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><use href="#i-church"/></svg></i>Churches</span></div></div><div class="card" style="background:var(--cream-2)"><h3 style="font-size:9.6pt">The big idea</h3><p style="font-size:8.6pt">When families, schools and the whole community work together as one team, <b>every child in Biakoye can shine bright.</b></p></div><div class="cheer"><h3>You are part of Biakoye's team!</h3><p>Biakoye is your home too. Your voice helps every child shine.</p></div><div class="bigidea"><p style="font-weight:700;color:#fff;margin-bottom:2mm">You can't build a bright Biakoye with one block.</p><p>Home gardens are great — but not if a child can't get through the school door. When all six super powers work together, <b>Biakoye becomes a place where every child can shine bright.</b></p></div><div class="panelnum">Inside 3</div></div></div>
+</body>
+</html>
